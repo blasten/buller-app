@@ -1,0 +1,1180 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"curr",
+				"currentPage"
+			],
+			[
+				"le",
+				"length"
+			],
+			[
+				"Zoom",
+				"ZoomSliderView"
+			],
+			[
+				"is",
+				"isTouchDevice"
+			],
+			[
+				"webkit-trans",
+				"-webkit-transition-delay:   (property)"
+			],
+			[
+				"get",
+				"getInstance"
+			],
+			[
+				"webkit-tran",
+				"-webkit-transition:   (property)"
+			],
+			[
+				"webkit-transi",
+				"-webkit-transition:   (property)"
+			],
+			[
+				"ver",
+				"verticalStyle"
+			],
+			[
+				"webkit-transition",
+				"-webkit-transition-delay:   (property)"
+			],
+			[
+				"webkit-",
+				"webkit-transform"
+			],
+			[
+				"pos",
+				"position"
+			],
+			[
+				"of",
+				"offsetX"
+			],
+			[
+				"webkit",
+				"webkit-transform"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"ui-s",
+				"ui-miniatures-slider"
+			],
+			[
+				"page",
+				"pageWrap"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"z-",
+				"z-index"
+			],
+			[
+				"_touch",
+				"_touchend"
+			],
+			[
+				"_to",
+				"_touchstart"
+			],
+			[
+				"list",
+				"list-style"
+			],
+			[
+				"DISPLAY",
+				"DISPLAY_SINGLE"
+			],
+			[
+				"proto",
+				"prototype"
+			],
+			[
+				"respon",
+				"responsive-image"
+			],
+			[
+				"pro",
+				"progress"
+			],
+			[
+				"id_",
+				"id_block"
+			],
+			[
+				"content",
+				"contentModel"
+			],
+			[
+				"featur",
+				"featureList"
+			],
+			[
+				"bac",
+				"background-size"
+			],
+			[
+				"ba",
+				"background-color"
+			],
+			[
+				"backgro",
+				"background-size"
+			],
+			[
+				"font",
+				"font-weight"
+			],
+			[
+				"target",
+				"targetPage"
+			],
+			[
+				"blo",
+				"blocks"
+			],
+			[
+				"background-",
+				"background-repeat"
+			],
+			[
+				"len",
+				"length-1"
+			],
+			[
+				"ig",
+				"IGNORE_ELEMENTS"
+			],
+			[
+				"break",
+				"breakingPoint"
+			],
+			[
+				"nextPa",
+				"nextPageNum"
+			],
+			[
+				"turn",
+				"turnMethods"
+			],
+			[
+				"fi",
+				"firstElement"
+			],
+			[
+				"block",
+				"blockNum"
+			],
+			[
+				"frag",
+				"fragStatus"
+			],
+			[
+				"ogra",
+				"ogradient"
+			],
+			[
+				"new",
+				"newRegion"
+			],
+			[
+				"next",
+				"nextPage"
+			],
+			[
+				"offset",
+				"offsetTop"
+			],
+			[
+				"visi",
+				"visibility"
+			],
+			[
+				"pages",
+				"pageObjs"
+			],
+			[
+				"total",
+				"totalPages"
+			],
+			[
+				"flip",
+				"flipify"
+			],
+			[
+				"tota",
+				"totalPages"
+			],
+			[
+				"nex",
+				"nextRegion"
+			],
+			[
+				"no",
+				"nowrap"
+			],
+			[
+				"outer",
+				"outerWidth"
+			],
+			[
+				"f",
+				"features"
+			],
+			[
+				"fli",
+				"flipify"
+			],
+			[
+				"app",
+				"appClass"
+			],
+			[
+				"tot",
+				"totalPages"
+			],
+			[
+				"trans",
+				"transparent"
+			],
+			[
+				"font-",
+				"font-family"
+			],
+			[
+				"Mini",
+				"miniMethods"
+			],
+			[
+				"mi",
+				"miniatures"
+			],
+			[
+				"event",
+				"eventPoint"
+			],
+			[
+				"eve",
+				"eventName"
+			],
+			[
+				"stop",
+				"stopPropagation  (function)"
+			],
+			[
+				"fetch",
+				"fetchRegions"
+			],
+			[
+				"for",
+				"for	for (…) {…}"
+			],
+			[
+				"last",
+				"lastPage"
+			],
+			[
+				"bound",
+				"boundWidth"
+			],
+			[
+				"magazine",
+				"magazine-viewport"
+			],
+			[
+				"webkit-tra",
+				"-webkit-transition-duration:   (property)"
+			],
+			[
+				"prop",
+				"prototype  (variable)"
+			],
+			[
+				"j",
+				"jElem"
+			],
+			[
+				"border",
+				"border-radius"
+			],
+			[
+				"n",
+				"nth-child(  (pseudo-class)"
+			],
+			[
+				"bor",
+				"borderWidth"
+			],
+			[
+				"current",
+				"currentSlide"
+			],
+			[
+				"view",
+				"viewerHeight"
+			],
+			[
+				"viewer",
+				"viewerWidth"
+			],
+			[
+				"slider",
+				"sliderMethods"
+			],
+			[
+				"inline",
+				"inline-block"
+			],
+			[
+				"auto",
+				"autoCenter"
+			],
+			[
+				"fo",
+				"focuspot"
+			],
+			[
+				"focus",
+				"focuspot"
+			],
+			[
+				"hal",
+				"halfWidth"
+			],
+			[
+				"cor",
+				"cornerSize"
+			],
+			[
+				"ne",
+				"newDisplay"
+			],
+			[
+				"swipe",
+				"swipeSpeed"
+			],
+			[
+				"prevent",
+				"preventDefault"
+			],
+			[
+				"a",
+				"angle2"
+			],
+			[
+				"start",
+				"startPoint"
+			],
+			[
+				"pr",
+				"proto	Prototype"
+			],
+			[
+				"inner",
+				"innerText"
+			],
+			[
+				"ob",
+				"observe"
+			],
+			[
+				"node",
+				"nodeValue"
+			],
+			[
+				"chil",
+				"childNodes"
+			],
+			[
+				"prot",
+				"prototype"
+			],
+			[
+				"curre",
+				"currentPivot"
+			],
+			[
+				"curren",
+				"currentPivot"
+			],
+			[
+				"cur",
+				"currentElem"
+			],
+			[
+				"element",
+				"elementIndex"
+			],
+			[
+				"NODE",
+				"nodeValue  (variable)"
+			],
+			[
+				"off",
+				"offsetTop"
+			],
+			[
+				"size",
+				"sizeSingle"
+			],
+			[
+				"peelin",
+				"peelingPoint"
+			],
+			[
+				"point",
+				"point2D"
+			],
+			[
+				"peel",
+				"peelingPoint"
+			],
+			[
+				"Point",
+				"point2D"
+			],
+			[
+				"turnjs-p",
+				"turnjs-preview"
+			],
+			[
+				"from",
+				"fromMouseAction"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "app/controllers/application_controller.rb",
+			"settings":
+			{
+				"buffer_size": 204,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "Packages/User/less.sublime-build",
+	"command_palette":
+	{
+		"height": 375.0,
+		"selected_items":
+		[
+			[
+				"packag",
+				"Package Control: Remove Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"rem",
+				"Package Control: Remove Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"disable",
+				"SublimeCodeIntel: Disable Plugin"
+			],
+			[
+				"DISABLE",
+				"SublimeCodeIntel: Disable Plugin"
+			],
+			[
+				"DISABL",
+				"SublimeLinter: Disable Linting"
+			],
+			[
+				"disab",
+				"SublimeLinter: Disable Linting"
+			],
+			[
+				"DISA",
+				"SublimeCodeIntel: Disable Plugin"
+			],
+			[
+				"di",
+				"SublimeLinter: Disable Linting"
+			],
+			[
+				"code",
+				"SublimeCodeIntel: Enable Plugin"
+			],
+			[
+				"disp",
+				"SublimeCodeIntel: Disable Plugin"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Disable Package"
+			],
+			[
+				"snippe",
+				"Snippet: Object key — key: \"value\""
+			],
+			[
+				"snipp",
+				"Snippet: #!/usr/bin/env"
+			],
+			[
+				"Snippet: ",
+				"Snippet: for (…) {…}"
+			],
+			[
+				"",
+				"Snippet: for (…) {…} (Improved Native For-Loop)"
+			],
+			[
+				"package",
+				"Package Control: Remove Package"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"INSTal",
+				"Package Control: Install Package"
+			],
+			[
+				"INSTAL",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 588.0
+	},
+	"console":
+	{
+		"height": 139.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/src/js/widgets/flipbook/zoom.js",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/src/js/turn/definitions.js",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/src/js/turn.js",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/src/js/turn/events.js",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/src/js/widgets/flipbook/blocks.js",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/src/js/widgets/flipbook/changePage.js",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/src/js/widgets/flipbook/container.js",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/src/js/widgets/flipbook/events.js",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/src/js/widgets/flipbook/export.js",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/src/js/widgets/flipbook/flip.js",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/src/js/widgets/flipbook/init.js",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/src/js/widgets/flipbook/pages.js",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/src/js/widgets/flipbook/transitions/curl.js",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/src/js/widgets/flipbook/transitions/hard.js",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/src/js/widgets/menu/export.js",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/src/js/widgets/menu/init.js",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/src/js/widgets/menu/menu.js",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/src/js/widgets/miniature/export.js",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/src/js/widgets/miniature/init.js",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/src/js/widgets/miniature/miniature.js",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/src/js/widgets/slider/export.js",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/src/js/widgets/slider/init.js",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/src/js/widgets/slider/slider.js",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/src/js/widgets/tooltip/export.js",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/src/js/widgets/tooltip/init.js",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/src/js/widgets/tooltip/tooltip.js",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/src/js/definitions.js",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/src/js/events.js",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/src/js/foundation.js",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/src/js/main.js",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/samples/catalog/assets/js/app.js",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/src/js/Find Results",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/src/js/widgets/flipbook/dependencies.js",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/src/js/widgets/turn/pages.js",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/src/js/widgets/turn/zoom.js",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/src/js/widgets/turn/container.js",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/src/js/widgets/miniatures/miniatures.js",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/samples/catalog/index.html",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/src/js/widgets/tooltips/init.js",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/samples/catalog/assets/less/controls.less",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/samples/catalog/assets/less/ui-zoom-slider.less",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/samples/catalog/magazine.html",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/samples/catalog/assets/js/backbone-min.js",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/src/js/widgets/turn/init.js",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/src/js/widgets/turn/changePage.js",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/src/js/widgets/turn/blocks.js",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/src/js/widgets/tooltips/tooltips.js",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/src/js/widgets/miniatures/init.js",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/src/less/ui-menu.less",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/src/js/widgets/menu",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/samples/catalog/assets/less/global.less",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/samples/catalog/content/magazine/1/regions.json",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/src/less/main.less",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/src/less/ui-regions.less",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/src/less/ui-tooltip.less",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/samples/catalog/assets/js/2",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/src/less/ui-flipbook.less",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/src/less/ui-slider.less",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/src/less/ui-miniatures.less",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/samples/website/index.html",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/samples/catalog/assets/css/main.css",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/samples/website/assets/js/front.js",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/src/js/widgets/turn/events.js",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/samples/1.html",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/turnjs.sublime-workspace",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/samples/catalog/assets/js/turn.min.js",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/README.md",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/build/development/js/turn.js",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/src/less/commons.less",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/Gruntfile.js",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/samples/catalog/assets/less/ui-share-box.less",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/package.json",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/samples/catalog/assets/less/main.less",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/samples/catalog/assets/less/content.css",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/src/js/widgets/turn/defaultOptions.js",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/src/js/widgets/turn/flip.js",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/src/less/tooltip.less",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/src/less/common.less",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/src/less/flipbook.less",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/src/less/slider.less",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/src/less/miniatures.less",
+		"/Users/blasten/Downloads/panda-mobile/public/js/lib/iscroll.js",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/src/js/intro.js",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/src/js/widgets/tooltips/export.js",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/src/js/widgets/turn/public Node lowestCommonAncestor(Node a, Node b) {",
+		"/Users/blasten/Downloads/PayPal app.svg",
+		"/Users/blasten/www/flipify/assets/scripts/turn.js",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/src/js/widgets/turn/transitions/curl.js",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/src/js/widgets/turn/export.js",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs4/turn.js",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/samples/website/assets/css/front.css",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/tasks/build/build.js",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/dependencies/backbone-empty.js",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/samples/website/assets/css/footer.less",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/samples/website/assets/css/collections.less",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/samples/website/assets/css/navigation.less",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/samples/website/assets/css/sections.less",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/samples/website/assets/css/globals.less",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/samples/website/assets/css/front.less",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/src/js/_events.js",
+		"/Users/blasten/www/flip/packages/turnjs4/lib/zoom.js",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/src/less/pages.less",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/build/css/turn.min.css",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/build/r.js",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/build/tasks/build.js",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/src/definitions.js",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/production/turn.js",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/production/turn.min.js",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/src/widgets/turn/container.js",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/src/widgets/turn/zoom.js",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/src/widgets/turn/pages.js",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/src/widgets/turn/events.js",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/src/widgets/turn/changePage.js",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/src/widgets/turn/blocks.js",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/src/widgets/turn/init.js",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/src/widgets/turn/flip.js",
+		"/Users/blasten/www/flipify/assets/scripts/views/Magazine.js",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/src/widgets/slider/slider.js",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/src/widgets/miniatures/miniatures.js",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/src/widgets/animatef/init.js",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/src/widgets/turn/Find Results",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/src/events.js",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/src/foundation.js",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/src/widgets/turn/defaultOptions.js",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/src/widgets/turn/dependencies.js",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/src/widgets/turn/export.js",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/src/intro.js",
+		"/Users/blasten/www/flipify/assets/scripts/turnjs/dependencies/empty.js"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"/Users/blasten/www/flipify/assets/scripts/turnjs",
+			"/Users/blasten/www/flipify/assets/scripts/turnjs/src/",
+			"/Users/blasten/www/flipify/assets/scripts/turnjs/src/js/",
+			"/Users/blasten/www/flipify/assets/scripts/turnjs/src/js/widgets/flipbook",
+			"/Users/blasten/www/flipify/assets/scripts/turnjs/src/js",
+			"/Users/blasten/www/flipify/assets/scripts/turnjs/,-/Users/blasten/www/flipify/assets/scripts/turnjs/build/*,-/Users/blasten/www/flipify/assets/scripts/turnjs/dependencies/*,-/Users/blasten/www/flipify/assets/scripts/turnjs/node_modules/*",
+			"/Users/blasten/www/flipify/assets/scripts/turnjs/,-/Users/blasten/www/flipify/assets/scripts/turnjs/build/*,-/Users/blasten/www/flipify/assets/scripts/turnjs/dependencies/*",
+			"/Users/blasten/www/flipify/assets/scripts/turnjs/,-/Users/blasten/www/flipify/assets/scripts/turnjs/build/*,-/Users/blasten/www/flipify/assets/scripts/turnjs/dependencies/",
+			"/Users/blasten/www/flipify/assets/scripts/turnjs/,-/Users/blasten/www/flipify/assets/scripts/turnjs/build/*",
+			"/Users/blasten/www/flipify/assets/scripts/turnjs/",
+			"/Users/blasten/www/flipify/assets/scripts/turnjs/,-/Users/blasten/www/flipify/assets/scripts/turnjs/build/*",
+			"/Users/blasten/www/flipify/assets/scripts/turnjs/*,-/Users/blasten/www/flipify/assets/scripts/turnjs/build/*",
+			"/Users/blasten/www/flipify/assets/scripts/turnjs/,-/Users/blasten/www/flipify/assets/scripts/turnjs/build/*",
+			"/Users/blasten/www/flipify/assets/scripts/turnjs/,-/Users/blasten/www/flipify/assets/scripts/turnjs/build",
+			"/Users/blasten/www/flipify/assets/scripts/turnjs/",
+			"/Users/blasten/www/flipify/assets/scripts/turnjs/samples/catalog/assets/less",
+			"/Users/blasten/www/flipify/assets/scripts/turnjs/src/js/widgets/turn",
+			"/Users/blasten/www/flipify/assets/scripts/turnjs/src/js/",
+			"/Users/blasten/www/flipify/assets/scripts/turnjs/src/js/widgets",
+			"/Users/blasten/www/flipify/assets/scripts/",
+			"/Users/blasten/www/flipify/assets/scripts/turnjs/src/widgets/",
+			"/Users/blasten/www/flipify/assets/scripts/turnjs/src/widgets/turn",
+			"/Users/blasten/www/flipify/assets/scripts/turnjs/src/widgets,-blocks.js",
+			"/Users/blasten/www/flipify/assets/scripts/turnjs/src/widgets",
+			"/Users/blasten/www/flipify/assets,/Users/blasten/www/flipify/assets/scripts"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"moving",
+			"vmousemove",
+			"_eventDelegation",
+			"pageTurned",
+			"_event",
+			"event",
+			"_eventPress",
+			"_eventDelegation",
+			"_registerEvent",
+			"window",
+			"definition",
+			"foundation",
+			"def",
+			"turn",
+			"turn(",
+			"turn",
+			"turn(",
+			"turn",
+			"turn(",
+			"tooltips(",
+			"miniatures(",
+			"turn(",
+			"tooltips(",
+			"miniatures(",
+			"miniatures",
+			"Turn",
+			"Miniatures",
+			"Tooltips",
+			"===undefined",
+			"Options",
+			"hideTimer",
+			"_vmouseoutEvent",
+			"zoom",
+			"zoomslider",
+			"menu",
+			"$('#ui-icon-toggle').css('display')",
+			"extend-ui-options",
+			"hideMenu",
+			"extend-ui-options",
+			"loader",
+			"refresh",
+			"pointer-events",
+			"size",
+			"tooltips",
+			"miniatures",
+			"tooltip",
+			"proxy",
+			"hover",
+			"miniatures",
+			"istouch",
+			"controls",
+			"_tapNextArrowEvent",
+			"extend-ui-options",
+			"ui-icon-expand-options",
+			"left",
+			"ui-icon-expand-options",
+			"ui-icon",
+			"ui-icon-expand-options",
+			"ui-icon",
+			"ui-icon-expand-option",
+			"ui-icon-expand-options",
+			"ui-icon-expand",
+			"display",
+			"display: ",
+			"pointerEvents",
+			"pointerEvent",
+			"pointer-event",
+			"pointer-events",
+			"proxy",
+			"show",
+			"ui-miniatures-slider-open",
+			"proxy",
+			"release",
+			"press",
+			"nohover",
+			"hover",
+			"move",
+			"press",
+			"©",
+			"instance",
+			"stopFade",
+			"controls",
+			"#controls",
+			"control",
+			"controls",
+			"#controls",
+			"#control",
+			"PageSliderView",
+			"turn.turn",
+			"ui-icon-expand",
+			"show-zoom-slider",
+			"showZoom",
+			"show",
+			"_changeValueEvent",
+			"hideMiniatures",
+			"showMiniatures",
+			"Singleton",
+			"PageSliderView",
+			"$(this)",
+			"FlipbookSettings",
+			"ui-miniatures-slider-open",
+			"MiniaturesView",
+			"show-ui-share-box",
+			"ui-share-options",
+			"_tapEvent",
+			"ui-share-box",
+			"event.stopPropagation",
+			"zoom-slider-view",
+			"showZoomSliderView",
+			"showMiniatures",
+			"zoom-slider",
+			"hideMiniatures",
+			"_momentum",
+			"ui-miniatures-slider-open",
+			"show-miniatures",
+			"close-mark",
+			"extend-ui-options",
+			"extend-ui-options\nextend-ui-options",
+			"extend-ui-options",
+			"ui-options",
+			"calc",
+			"ui-arrow-control",
+			"ui-miniatures-slider",
+			"console",
+			"swipe",
+			"ui-options",
+			"#controls",
+			"zooming"
+		],
+		"highlight": false,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"turn",
+			"Turn",
+			"flipbook(",
+			"tooltip(",
+			"miniature(",
+			"flipbook(",
+			"tooltip(",
+			"miniature(",
+			"Flipbook",
+			"flipbook",
+			"Miniature",
+			"Tooltip",
+			"vmousedown",
+			"SingleView",
+			"zoom-slider",
+			"ui-share-options",
+			"ui-share-box",
+			"ui-icon",
+			"ui-options",
+			"ui-arrow-previous-page",
+			"ui-arrow-next-page",
+			"ui-arrow-control",
+			"Event",
+			"this._data",
+			"_animationCompleted",
+			"this",
+			"0\":\"\",\\n",
+			"0\":\"\",",
+			"\"0x",
+			"def",
+			"turn-catalog",
+			".turn-viewport",
+			"BarButton",
+			"target",
+			"panel",
+			"magazine",
+			"_flowContent",
+			"notebook",
+			"turn-book",
+			"_pageNeeded",
+			"turn-notebook",
+			"{\\n",
+			"{",
+			".model",
+			"hasRotation",
+			"_eventMove",
+			"move",
+			"unpress",
+			"_eventUnpress",
+			"miniatures",
+			"miniature",
+			"miniMethods",
+			"tsliderMethods",
+			"hover",
+			"<",
+			".page",
+			"page",
+			"next",
+			".next",
+			".options",
+			"directions['rtl']",
+			"directions['ltr']",
+			"displays['single']",
+			"displays['double']",
+			"\\n",
+			"",
+			"===============",
+			"",
+			"f",
+			"",
+			"event",
+			"touchEnd",
+			"touchMove",
+			"touchEnd",
+			"touchStart",
+			"_removeFromList",
+			"origin",
+			"points",
+			"spot",
+			"clip",
+			"http://en.wikipedia.org/wiki/",
+			"word",
+			"  ",
+			"pPoint",
+			"d",
+			"_startPoint",
+			"_endPoint",
+			"endPoint",
+			"point",
+			"_cornerAllowed",
+			"  ",
+			"gradientStartVal",
+			"  ",
+			"turnError",
+			"  "
+		],
+		"reverse": false,
+		"show_context": false,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "app/controllers/application_controller.rb",
+					"settings":
+					{
+						"buffer_size": 204,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110.0
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2.0,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": true,
+							"sublimelinter_gutter_marks_theme": "simple",
+							"sublimelinter_mark_style": "none",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 34.0
+	},
+	"input":
+	{
+		"height": 34.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 216.0
+	},
+	"output.find_results":
+	{
+		"height": 120.0
+	},
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 294.0,
+	"status_bar_visible": true
+}

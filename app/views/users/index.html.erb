@@ -1,0 +1,24 @@
+<%- title "Users" %>
+<h3>Users registered so far</h3>
+<table class="table table-striped">
+
+<% unless @users.blank? %>
+  <% @users.each do |user|  %>
+    <tr>
+      <td style="vertical-align:middle"> 
+        <a href="<%=user_path(user)%>"><img src="<%= user.image_url %>" width="80" height="80"/></a> 
+      </td>
+      <td style="vertical-align:middle"> <%= link_to user.name, user_path(user) %> </td>
+      <td style="vertical-align:middle"> <%= link_to user.nickname, user_path(user) %></td>
+      <td style="vertical-align:middle">
+        <%= link_to 'Edit', edit_user_path(user) %>
+        |
+        <%= link_to 'Delete', user_path(user), method: :delete %></td>
+
+      </td>
+    </tr>  
+  <% end %>
+</table>
+<% else %>
+  No user has been registered yet.
+<% end %>

@@ -1,0 +1,21 @@
+<%- title "#{@user.name}" %>
+
+<h3><%=@user.name%></h3>
+
+<p>
+  <%=@user.nickname%>
+</p>
+
+<p>
+  <%=@user.email%>
+</p>
+
+<p>
+  <img src="<%=@user.image_url%>" width="80" height="80"/>
+</p>
+
+<p>
+  <%= link_to 'Edit user', edit_user_path(@user) %> 
+    |
+  <%= link_to 'Users', users_path() %>
+</p>

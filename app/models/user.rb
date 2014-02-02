@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
   validates :name, presence: true, length: { minimum: 2 }
   validates :nickname, presence: true, length: { minimum: 2 }
-  validates :email, presence: true, format: { with: /\A[a-zA-Z0-9_-]{1,}@[a-zA-Z0-9_-]{1,}\.[a-zA-Z0-9_-]{2,}\z/, message: "Invalid email format" }
+  validates :email, presence: true, format: { with: /\A[a-zA-Z0-9_\.-]{1,}@[a-zA-Z0-9_\.-]{1,}\.[a-zA-Z0-9_-]{2,}\z/, message: "Invalid email format" }
 
   # Redefines the image_url getter
   # If image_url is empty it will fallback to gravatar's image

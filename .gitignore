@@ -6,7 +6,11 @@
 
 # Ignore bundler config.
 /.bundle
+
+# Ignore the output from the rails server
 /.output
+
+# Ignore sublime text project files
 /.project.sublime-project
 /.project.sublime-workspace
 

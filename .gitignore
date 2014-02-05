@@ -11,8 +11,8 @@
 /.output
 
 # Ignore sublime text project files
-/.project.sublime-project
-/.project.sublime-workspace
+/project.sublime-project
+/project.sublime-workspace
 
 # Ignore the default SQLite database.
 /db/*.sqlite3

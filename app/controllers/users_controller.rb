@@ -17,6 +17,8 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
+      # Start the session automatically
+      sign_in(@user)
       redirect_to users_path, notice: "Your account was successfully created!"
     else
       render 'new'

@@ -1,0 +1,23 @@
+<%- title "Sign in" %>
+<%= bootstrap_flash %>
+<div class="container">
+  <div style="margin: 0 auto; width: 250px;">
+    <h3>Sign in</h3>
+    <%= form_for :session, url: sessions_path do |f| %>
+      <div class="form-group">
+        <%= f.text_field :email, :placeholder => "Email address", :autofocus => true %>
+      </div>
+
+      <div class="form-group">
+        <%= f.password_field :password, :placeholder => "Password" %>
+      </div>
+
+       <div class="form-group">
+        <%= f.submit  :class=> "btn btn-primary", :value => "Submit" %>
+      </div>
+    </form>
+    <hr>
+    <p> Not registered yet? <%= link_to "Sign up", signup_path  %><p>
+    <% end %>
+    </div>
+</div>

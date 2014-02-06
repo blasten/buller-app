@@ -1,35 +1,35 @@
-<% if @user.errors.any? %>
-<div id="error_explanation" class="alert alert-danger">
-  <strong><%= pluralize(@user.errors.count, "error") %> prohibited
-    this post from being saved:</strong>
-  <ul>
-  <% @user.errors.full_messages.each do |msg| %>
-    <li><%= msg %></li>
-  <% end %>
-  </ul>
-</div>
-<% end %>
-
-<%= form_for @user do |f| %>
+<%= form_for @user do |f| %>  
   <div class="form-group">
     <%= f.label :name %>
     <%= f.text_field :name, :placeholder => "Your name", autofocus: true %>
   </div>
+  
   <div class="form-group">
     <%= f.label :nickname %>
     <%= f.text_field :nickname, :placeholder => "Your nickname" %>
   </div>
 
-   <div class="form-group">
-    <%= f.label :email %>
-    <%= f.text_field :email, :placeholder => "" %>
-  </div>
   <div class="form-group">
     <%= f.label :image_url %>
     <%= f.text_field :image_url, :placeholder => "http://something.com/picture.jpg" %>
   </div>
- 
-  <button type="submit" class="btn btn-default">Submit</button>
+
+  <div class="form-group">
+    <%= f.label :email %>
+    <%= f.text_field :email, :placeholder => "Your email address" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :password %>
+    <%= f.password_field :password%>
+  </div>
+
+    <div class="form-group">
+    <%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation%>
+  </div>
+
+  <%= f.submit  :class=> "btn btn-primary", :value => "Submit" %>
 
 </form>
 <% end %>

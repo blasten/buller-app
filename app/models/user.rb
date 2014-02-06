@@ -10,13 +10,20 @@ class User < ActiveRecord::Base
   
   has_secure_password
 
-  # Model validations
+  # Validations
   validates :name, presence: true, length: { minimum: 2 }
   validates :nickname, presence: true, length: { minimum: 2 }
   validates :email, presence: true, format: { with: /\A[a-zA-Z0-9_\.-]{1,}@[a-zA-Z0-9_\.-]{1,}\.[a-zA-Z0-9_-]{2,}\z/, message: "Invalid email format" }
 
+  # Use lowercase email before saving the model
+  before_save { |user| user.email = email.downcase }
+  
+  # Create a unique token before saving the model
+  before_save :create_remember_token
+
   # Redefines the image_url getter
   # If image_url is empty it will fallback to gravatar's image
+
   def image_url
     src = read_attribute(:image_url).downcase
     src.strip!
@@ -26,6 +33,14 @@ class User < ActiveRecord::Base
       return "http://www.gravatar.com/avatar/#{hash}"
     else 
       return src
+    end
+  end
+
+  private
+  
+  def create_remember_token
+    if self.remember_token.empty?
+      self.remember_token = SecureRandom.urlsafe_base64
     end
   end
 end

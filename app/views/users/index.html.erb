@@ -1,7 +1,10 @@
 <%- title "Users" %>
-<h3>Registered users so far</h3>
-<table class="table table-striped">
 
+<h3>Registered users so far</h3>
+
+<%= bootstrap_flash %>
+
+<table class="table table-striped">
 <% unless @users.blank? %>
   <% @users.each do |user|  %>
     <tr>
@@ -10,12 +13,6 @@
       </td>
       <td style="vertical-align:middle"> <%= link_to user.name, user_path(user) %> </td>
       <td style="vertical-align:middle"> <%= link_to user.nickname, user_path(user) %></td>
-      <td style="vertical-align:middle">
-        <%= link_to 'Edit', edit_user_path(user) %>
-        |
-        <%= link_to 'Delete', user_path(user), method: :delete %></td>
-
-      </td>
     </tr>  
   <% end %>
 </table>

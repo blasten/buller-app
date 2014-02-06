@@ -1,9 +1,24 @@
 Bueller::Application.routes.draw do
   #get "welcome/index"
 
-
-  resources :users
+  # Homepage
   root "users#index"
+
+  # Users
+  resources :users, only: [:index, :show, :new, :create, :edit, :update]
+
+  # Session resource should be limited to :new, :create and :destroy
+
+  resource :sessions, only: [:new, :create, :destroy]
+
+  # Account
+  get "/signin" => "sessions#new"
+  get "/signout" => "sessions#destroy"
+  get "/signup" => "users#new"
+  get '/sessions', to: redirect('/')
+
+
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

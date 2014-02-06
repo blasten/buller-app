@@ -38,38 +38,29 @@
   </head>
   <body>
 
-    <div class="navbar navbar-fluid-top">
+
+
+    <div class="navbar navbar-fluid-top" role="navigation">
       <div class="navbar-inner">
         <div class="container-fluid">
-          <a class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </a>
           <a class="brand" href="/">Bueller</a>
-          <div class="container-fluid nav-collapse">
-            <ul class="nav">
-              <li><%= link_to "Users", users_path()  %></li>
-            </ul>
-          </div><!--/.nav-collapse -->
+          <ul class="nav nav-pills pull-right">
+            <% if signed_in? %>
+              <li><%= link_to 'Edit profile', edit_user_path(current_user) %></li>
+              <li><%= link_to 'Sign out', signout_path %></li>
+            <% else %>
+              <%=link_to "Sign up", signup_path, :class =>'btn btn-success'  %>
+              <%=link_to "Sign in", signin_path, :class =>'btn btn-xs btn-link' %>
+            <% end %> 
+          </ul>
+
         </div>
       </div>
     </div>
 
-    <div class="container-fluid">
-      <div class="row-fluid">
-        <div class="span3">
-          <div class="well sidebar-nav">
-            <ul class="nav nav-list">
-              <li><%= link_to "Create a new student", new_user_path  %></li>
-            </ul>
-          </div><!--/.well -->
-        </div><!--/span-->
-        <div class="span9">
-          <%= bootstrap_flash %>
-          <%= yield %>
-        </div>
-      </div><!--/row-->
+      <div class="container theme-showcase" role="main">
+        <%= yield %>
+      </div>
 
       <footer>
       </footer>

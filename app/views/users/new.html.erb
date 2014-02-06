@@ -1,5 +1,23 @@
-<%- title "New User" %>
+<%- title "Sign up" %>
 
-<h3>New User</h3>
+<% if @user.errors.any? %>
+<div id="error_explanation" class="alert alert-danger">
+  <strong><%= pluralize(@user.errors.count, "error") %> prohibited
+    this post from being saved:</strong>
+  <ul>
+  <% @user.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+  <% end %>
+  </ul>
+</div>
+<% end %>
 
-<%= render 'form' %>
+
+<div class="container">
+  <div style="margin: 0 auto; width: 250px;">
+    <h3>Sign up</h3>
+    <p> Registered yet? <%= link_to "Sign in", signin_path  %><p>
+    <hr>
+    <%= render 'form' %>
+  </div>
+</div>

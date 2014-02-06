@@ -39,7 +39,7 @@ class User < ActiveRecord::Base
   private
   
   def create_remember_token
-    if self.remember_token.empty?
+    if self.remember_token.nil? || self.remember_token.empty?
       self.remember_token = SecureRandom.urlsafe_base64
     end
   end

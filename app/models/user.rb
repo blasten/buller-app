@@ -13,7 +13,7 @@ class User < ActiveRecord::Base
   # Validations
   validates :name, presence: true, length: { minimum: 2 }
   validates :nickname, presence: true, length: { minimum: 2 }
-  validates :email, presence: true, format: { with: /\A[a-zA-Z0-9_\.-]{1,}@[a-zA-Z0-9_\.-]{1,}\.[a-zA-Z0-9_-]{2,}\z/, message: "Invalid email format" }
+  validates :email, presence: true, uniqueness: true, format: { with: /\A[a-zA-Z0-9_\.-]{1,}@[a-zA-Z0-9_\.-]{1,}\.[a-zA-Z0-9_-]{2,}\z/, message: "Invalid email format" }
 
   # Use lowercase email before saving the model
   before_save { |user| user.email = email.downcase }

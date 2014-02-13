@@ -11,14 +11,21 @@ class User < ActiveRecord::Base
   has_secure_password
 
   # Validations
+
   validates :name, presence: true, length: { minimum: 2 }
   validates :nickname, presence: true, length: { minimum: 2 }
   validates :email, presence: true, uniqueness: true, format: { with: /\A[a-zA-Z0-9_\.-]{1,}@[a-zA-Z0-9_\.-]{1,}\.[a-zA-Z0-9_-]{2,}\z/, message: "Invalid email format" }
 
+  # A user can have many attandances
+
+  has_many :attendances
+
   # Use lowercase email before saving the model
+
   before_save { |user| user.email = email.downcase }
   
   # Create a unique token before saving the model
+
   before_save :create_remember_token
 
   # Redefines the image_url getter
@@ -36,11 +43,26 @@ class User < ActiveRecord::Base
     end
   end
 
-  private
-  
-  def create_remember_token
-    if self.remember_token.nil? || self.remember_token.empty?
-      self.remember_token = SecureRandom.urlsafe_base64
-    end
+  # Returns the list of students who attended on `date` and sat down on `seat`
+  def self.in_seat(seat, date)
+    return User.joins(:attendances).where(attendances: {seat: seat, attended_on: date});
   end
+
+  # Returns the list of absent students
+  # where.not should be similar to
+  # `SELECT U.* FROM user U WHERE U.id NOT IN(SELECT A.id_user FROM attedance A FROM A.date=?)`
+
+  def self.absent(date)
+    return User.joins(:attendances).where.not(attendances: {attended_on: date});
+  end
+
+  private
+    # Creates a unique token that kill be sent to the client 
+    # as a cookie to allow the user to sign in.
+
+    def create_remember_token
+      if self.remember_token.nil? || self.remember_token.empty?
+        self.remember_token = SecureRandom.urlsafe_base64
+      end
+    end
 end

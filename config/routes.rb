@@ -11,11 +11,18 @@ Bueller::Application.routes.draw do
 
   resource :sessions, only: [:new, :create, :destroy]
 
+  # Attendance 
+  resources :attendances, only: [:new, :create, :update, :index]
+
   # Account
   get "/signin" => "sessions#new"
   get "/signout" => "sessions#destroy"
   get "/signup" => "users#new"
   get '/sessions', to: redirect('/')
+
+  # I'm here feature
+  get "/iam-here" => "attendances#new"
+  get "/attendances" => "attendances#index"
 
 
 

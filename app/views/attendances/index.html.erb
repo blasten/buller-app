@@ -1,0 +1,33 @@
+<%- title "Attendance" %>
+
+<%= bootstrap_flash %>
+
+
+<a class="btn btn-default pull-right" href="iam-here">
+  <i class="fa fa-pencil-square-o"></i> 
+  <b>Change seat</b>
+</a>
+
+<h3>Attendance</h3>
+
+<table class="table table-striped">
+<% unless @attendances.blank? %>
+  <tr>
+    <th></th>
+    <th>Student name</th>
+    <th>Seat</th>
+    <th>Attended on</th>
+  </tr>
+  <% @attendances.each do |attendance|  %>
+    <tr>
+      <td style="vertical-align:middle">  <a href="<%=user_path(attendance.user)%>"><img src="<%= attendance.user.image_url %>" width="80" height="80"/></a> </td>
+      <td style="vertical-align:middle"> <%= attendance.user.name %> </td>
+      <td style="vertical-align:middle"> <%= attendance.seat %> </td>
+      <td style="vertical-align:middle"> <%= attendance.attended_on.to_formatted_s(:short) %> </td>
+
+    </tr>  
+  <% end %>
+</table>
+<% else %>
+  No attendance has been submitted yet.
+<% end %>

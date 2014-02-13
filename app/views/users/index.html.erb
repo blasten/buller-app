@@ -1,8 +1,15 @@
-<%- title "Users" %>
-
-<h3>Registered users so far</h3>
+<%- title "Students" %>
 
 <%= bootstrap_flash %>
+
+<% if signed_in? %>
+<a class="btn btn-default pull-right" href="iam-here">
+  <i class="fa fa-hand-o-up"></i>
+  <b>I'm here</b>
+</a>
+<% end %>
+
+<h3>Registered students so far</h3>
 
 <table class="table table-striped">
 <% unless @users.blank? %>
@@ -17,5 +24,5 @@
   <% end %>
 </table>
 <% else %>
-  No user has been registered yet.
+  No student has been registered yet.
 <% end %>

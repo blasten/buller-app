@@ -65,7 +65,7 @@ class UsersController < ApplicationController
 
     # Redirects to `signin_path` if the user hasn't signed in yet
     def signed_in_user
-      redirect_to signin_path, :status => 301, :flash => {:error => "Please sign in."} unless signed_in?
+      redirect_to signin_path, :status => 403, :flash => {:error => "Please sign in."} unless signed_in?
     end
 
     # Checks if the requested user id matches the session user's id
@@ -74,7 +74,7 @@ class UsersController < ApplicationController
       @user = User.find(params[:id])
 
       # Redirect to the root if the user isn't perform requests on this resource
-      redirect_to root_path, :status => 301, :flash => {:error => "You can't do that!"} unless current_user[:id]==@user[:id]
+      redirect_to root_path, :status => 403, :flash => {:error => "You can't do that!"} unless current_user[:id]==@user[:id]
 
       # Redirect to the root path if the user isn't found
       rescue ActiveRecord::RecordNotFound

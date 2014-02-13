@@ -38,8 +38,6 @@
   </head>
   <body>
 
-
-
     <div class="navbar navbar-fluid-top" role="navigation">
       <div class="navbar-inner">
         <div class="container-fluid">
@@ -49,8 +47,8 @@
               <li><%= link_to 'Edit profile', edit_user_path(current_user) %></li>
               <li><%= link_to 'Sign out', signout_path %></li>
             <% else %>
-              <%=link_to "Sign up", signup_path, :class =>'btn btn-success'  %>
               <%=link_to "Sign in", signin_path, :class =>'btn btn-xs btn-link' %>
+              <%=link_to "Sign up", signup_path, :class =>'btn btn-success'  %>
             <% end %> 
           </ul>
 

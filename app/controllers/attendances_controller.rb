@@ -52,7 +52,7 @@ class AttendancesController < ApplicationController
   
   # Show all the attendances
   def index
-    @attendances = Attendance.all
+    @attendances = Attendance.all.order(created_at: :desc)
   end
 
   private

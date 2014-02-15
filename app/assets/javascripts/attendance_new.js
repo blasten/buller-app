@@ -1,15 +1,13 @@
 (function(window) {
-
   function selectQuadrant($quadrant) {
-    var index = $quadrant.index()+1;
-
-    $(".seats").children(":not(:nth-child(" + index + "))").removeClass("seat-selected");
+    var index = $quadrant.index() + 1;
+    // Remove the class of the current selection
+    $(".seat-selected").removeClass("seat-selected");
     $quadrant.toggleClass("seat-selected");
 
-    if ( $quadrant.hasClass("seat-selected")) {
+    if ($quadrant.hasClass("seat-selected")) {
       $("#attendance_seat").attr("value", index);
       $("#profile-picture").show().appendTo($quadrant);
-
     } else {
       $("#attendance_seat").attr("value", "");
       $("#profile-picture").hide();
@@ -22,8 +20,9 @@
       selectQuadrant($(event.currentTarget));
     });
 
+    // Read the current seat and update the DOM
     var currentQuadrant = $("#attendance_seat").attr("value");
-    if (currentQuadrant!=='') {
+    if (currentQuadrant!=="") {
       selectQuadrant($(".seats").children(":nth-child(" + currentQuadrant + ")"));
     }
   });

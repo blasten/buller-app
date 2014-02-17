@@ -8,8 +8,8 @@
 <%= form_for @attendance do |f| %>
 
 <div class="seats">
-  <% for seat in 1..4 do %>
-    <div class="seat">
+  <% for seat_number in 1..4 do %>
+    <div class="seat <%= 'seat-selected' if seat_number == @attendance.seat %>">
       <img src="<%= current_user.image_url %>" width="80" height="80"/>
     </div>
   <% end %>

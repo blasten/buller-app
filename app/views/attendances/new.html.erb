@@ -5,16 +5,22 @@
 <h3>Attendance</h3>
 <p>Choose the quadrant where you are seating</p>
 
-<%= form_for @attendance do |f| %>  
+<%= form_for @attendance do |f| %>
 
 <div class="seats">
-  <div class="seat"></div>
-  <div class="seat"></div>
-  <div class="seat"></div>
-  <div class="seat"></div>
+  <div class="seat">
+    <img src="<%= current_user.image_url %>" width="80" height="80"/>
+  </div>
+  <div class="seat">
+    <img src="<%= current_user.image_url %>" width="80" height="80"/>
+  </div>
+  <div class="seat">
+    <img src="<%= current_user.image_url %>" width="80" height="80"/>
+  </div>
+  <div class="seat">
+    <img src="<%= current_user.image_url %>" width="80" height="80"/>
+  </div>
 </div>
-
-<img src="<%= current_user.image_url %>" width="80" height="80" id="profile-picture" style="display:none" />
 
 <%= f.hidden_field :seat %>
 <%= f.submit  :class=> "btn btn-primary", :value => "Save" %>

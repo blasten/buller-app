@@ -7,8 +7,15 @@
 
   // Trigger on DOM Ready
   $(function() {
-    $(".seats .seat").on("click", function(event) {
+    $(".editable-seats .seat").on("click", function(event) {
       selectSeat($(this));
+    });
+
+    $("input[name=date]").on("change", function(e) {
+      var $form = $(this).parent('form');
+      if ($form[0]) {
+        $form.submit();
+      }
     });
   });
 })(this);

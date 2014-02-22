@@ -14,19 +14,69 @@
   width: 300px;
   height: 300px;
   margin: 20px 0;
+
   .seat{
     width: 50%;
     height: 50%;
     float: left;
-    background: #ccc;
     border: 1px solid white;
     box-sizing: border-box;
-    cursor: pointer;
     @include border-radius(opacity 200ms);
-    opacity: 0.4;
     text-align: center;
     position: relative;
+    padding: 20px;
+    display: table;
   }
+
+  .student-row {
+    text-align: left;
+    display: table-row;
+
+    .picture, .nickname{
+      display: table-cell;
+      vertical-align: middle;
+      line-height: 45px;
+    }
+
+    .picture{
+      text-align: center;
+    }
+  }
+
+  .seat:nth-child(1) {
+    border-radius: 5px 0 0 0;
+  }
+  
+  .seat:nth-child(2) {
+    border-radius: 0 5px 0 0;
+  }
+
+  .seat:nth-child(3) {
+    border-radius: 0 0 0 5px;
+  }
+
+  .seat:nth-child(4) {
+    border-radius: 0 0 5px 0;
+  }
+}
+
+.default-seats{
+  .seat{
+    box-shadow: inset 0 0 3px #999; 
+    background-color: #dfdfdf;
+
+  }
+}
+
+.editable-seats{
+  cursor: pointer;
+
+  .seat{
+    opacity: 0.4;
+    padding: 0;
+    background-color: #ccc;
+  }
+
   .seat img{
     display: none;
     margin: auto;
@@ -49,21 +99,5 @@
 
   .seat-selected img{
     display: block
-  }
-
-  .seat:nth-child(1) {
-    border-radius: 5px 0 0 0;
-  }
-  
-  .seat:nth-child(2) {
-    border-radius: 0 5px 0 0;
-  }
-
-  .seat:nth-child(3) {
-    border-radius: 0 0 0 5px;
-  }
-
-  .seat:nth-child(4) {
-    border-radius: 0 0 5px 0;
   }
 }

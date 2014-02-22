@@ -1,5 +1,5 @@
 class AttendancesController < ApplicationController
-  before_filter :signed_in_user
+  before_filter :signed_in_user, :except => [:index]
 
   def new
     @attendance = Attendance.where(user: current_user, attended_on: Date.today).first() || Attendance.new
@@ -52,7 +52,16 @@ class AttendancesController < ApplicationController
   
   # Show all the attendances
   def index
-    @attendances = Attendance.all.order(created_at: :desc)
+    @attendances = {}
+
+    @current_date = params[:date] ? Date.parse(params[:date]) : Date.today;
+
+    # Group students by seat number
+    Attendance.where(attended_on: @current_date).order(created_at: :asc).each do |attendance| 
+      @attendances[attendance.seat] ||= []
+      @attendances[attendance.seat].push(attendance)
+
+    end
   end
 
   private

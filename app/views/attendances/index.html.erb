@@ -1,38 +1,28 @@
-<%- title "Attendance" %>
-
+<%- title "Attendances" %>
+<% active_tab :attendances %>
 <%= bootstrap_flash %>
 
-<% if signed_in? %>
-<a class="btn btn-default pull-right" href="iam-here">
-  <i class="fa fa-pencil-square-o"></i> 
-  <b>Change seat</b>
-</a>
-<% end %>
+<h3>Attendances</h3>
 
-<h3>Attendance for <%= @current_date.to_formatted_s(:long_ordinal) %></h3>
-
-<div class="seats default-seats">
-  <% for seat_number in 1..4 do %>
-    <div class="seat">
-      <% if @attendances.has_key?(seat_number) %>
-          <% @attendances[seat_number].each do |attendance|  %>
-            <div class="student-row">
-              <a href="<%=user_path(attendance.user)%>" class="picture"><img src="<%= attendance.user.image_url %>" width="40" height="40"/></a>
-              <a href="<%=user_path(attendance.user)%>" class="nickname">
-                <%= attendance.user.nickname %>
-              </a>
-            </div>
-        <% end %>
-      <% end %>
-    </div>
+<% unless @attendances.blank? %>
+<table class="table table-striped">
+  <tr>
+    <th>Picture</th>
+    <th>Student name</th>
+    <th>Seat</th>
+    <th>Date</th>
+  </tr>
+  <% @attendances.each do |attendance|  %>
+    <tr>
+      <td style="vertical-align:middle"> 
+        <a href="<%=user_path(attendance.user)%>"><img src="<%= attendance.user.image_url %>" width="80" height="80"/></a>
+      </td>
+      <td style="vertical-align:middle"> <%= link_to attendance.user.name, user_path(attendance.user) %> </td>
+      <td style="vertical-align:middle"> <%= attendance.seat %> </td>
+      <td style="vertical-align:middle"> <%= attendance.attended_on.to_formatted_s(:long_ordinal) %> </td>
+    </tr>  
   <% end %>
-</div>
-
-<%= form_tag(attendances_path, method: :get, class: 'inline-form') do %>
-  <label for="date">Date</label>
-  <%= date_field_tag('date', @current_date) %>
-<% end %>
-
-<%= content_for :javascript do %>
-
+</table>
+<% else %>
+  No attendance has been posted yet.
 <% end %>

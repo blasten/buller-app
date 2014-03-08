@@ -1,0 +1,17 @@
+<%- title "Attendance" %>
+<% active_tab :attendances %>
+<%= bootstrap_flash %>
+
+<h3><%= @user.name %>'s attendance</h3>
+
+<% unless @attendance.blank? %>
+<table class="table table-striped">
+  <% @attendance.each do |attendace|  %>
+    <tr>
+      <td><%= attendace.attended_on.to_formatted_s(:long_ordinal) %></td>
+    </tr>  
+  <% end %>
+</table>
+<% else %>
+  <p>No attendance has been posted for this student</p>
+<% end %>

@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_filter :signed_in_user, only: [:edit, :update]
+  before_filter :signed_in_user, only: [:edit, :index, :update]
   before_filter :correct_user, only: [:edit, :update]
   before_filter :not_signed_in_user, only: [:new, :create]
 
@@ -19,7 +19,7 @@ class UsersController < ApplicationController
     if @user.save
       # Start the session automatically
       sign_in(@user)
-      redirect_to users_path, notice: "Your account was successfully created!"
+      redirect_to root_path, notice: "Your account was successfully created!"
     else
       render 'new'
     end
@@ -29,7 +29,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id]) 
-
+    @attendances = @user.attendances;
   end
 
   # # #
@@ -64,7 +64,7 @@ class UsersController < ApplicationController
 
     # Redirects to `signin_path` if the user hasn't signed in yet
     def signed_in_user
-      redirect_to signin_path, :status => 403, :flash => {:error => "Please sign in."} unless signed_in?
+      redirect_to signin_path, :status => 302 unless signed_in?
     end
 
     # Checks if the requested user id matches the session user's id
@@ -73,7 +73,7 @@ class UsersController < ApplicationController
       @user = User.find(params[:id])
 
       # Redirect to the root if the user isn't perform requests on this resource
-      redirect_to root_path, :status => 403, :flash => {:error => "You can't do that!"} unless current_user[:id]==@user[:id]
+      redirect_to root_path, :status => 302, :flash => {:error => "You can't do that!"} unless current_user[:id]==@user[:id]
 
       # Redirect to the root path if the user isn't found
       rescue ActiveRecord::RecordNotFound

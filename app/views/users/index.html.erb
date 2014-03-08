@@ -1,5 +1,5 @@
 <%- title "Students" %>
-
+<% active_tab :students %>
 <%= bootstrap_flash %>
 
 <% if signed_in? %>
@@ -11,8 +11,8 @@
 
 <h3>Registered students so far</h3>
 
-<table class="table table-striped">
 <% unless @users.blank? %>
+<table class="table table-striped">
   <% @users.each do |user|  %>
     <tr>
       <td style="vertical-align:middle"> 
@@ -20,6 +20,7 @@
       </td>
       <td style="vertical-align:middle"> <%= link_to user.name, user_path(user) %> </td>
       <td style="vertical-align:middle"> <%= link_to user.nickname, user_path(user) %></td>
+      <td style="vertical-align:middle"> <%= link_to user.email, user_path(user) %></td>
     </tr>  
   <% end %>
 </table>

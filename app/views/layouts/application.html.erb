@@ -37,39 +37,51 @@
     <%= javascript_include_tag "application" %>
   </head>
   <body>
-
     <div class="navbar navbar-fluid-top" role="navigation">
       <div class="navbar-inner">
         <div class="container-fluid">
           <a class="brand" href="/">Bueller</a>
-          <ul class="nav">
-            <li class="<%=  controller_name=='attendances' && action_name=='index' ? 'active' : '' %>">
-              <%= link_to 'Attendance', attendances_path %>
-            </li>
-          </ul>
-          <ul class="nav nav-pills pull-right">
-            <% if signed_in? %>
+          <% if signed_in? %>
+            <ul class="nav">
+              
+              <li class="<%= active_tab == :seating_chart ? 'active' : '' %>">
+                <%= link_to 'Seating chart', chart_path %>
+              </li>
+
+              <li class="<%= active_tab == :attendances ? 'active' : '' %>">
+                <%= link_to 'Attendance', attendances_path %>
+              </li>
+              <li class="<%= active_tab == :students ? 'active' : '' %>">
+                <%= link_to 'Students', users_path %>
+              </li>
+            </ul>
+            <!-- edit profile -->
+            <ul class="nav nav-pills pull-right">
               <li><%= link_to 'Edit profile', edit_user_path(current_user) %></li>
               <li><%= link_to 'Sign out', signout_path %></li>
-            <% else %>
+            </ul>
+            <!-- /edit profile -->
+          <% else %>
+           <!-- anonymous user options-->
+            <ul class="nav nav-pills pull-right">
               <%=link_to "Sign in", signin_path, :class =>'btn btn-xs btn-link' %>
               <%=link_to "Sign up", signup_path, :class =>'btn'  %>
-            <% end %> 
-          </ul>
+            </ul>
+            <!-- /anonymous user options -->
+          <% end %>
         </div>
       </div>
     </div>
 
-      <div class="container theme-showcase" role="main">
-        <%= yield %>
-      </div>
+    <div class="container theme-showcase" role="main">
+      <%= yield %>
+    </div>
 
-      <footer>
-      </footer>
+    <footer>
+    </footer>
 
     </div> <!-- /container -->
 
     <%= yield :javascript %>
-
   </body>
 </html>

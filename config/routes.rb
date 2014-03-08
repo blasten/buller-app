@@ -2,7 +2,7 @@ Bueller::Application.routes.draw do
   #get "welcome/index"
 
   # Homepage
-  root "users#index"
+  root "attendances#seating_chart"
 
   # Users
   resources :users, only: [:index, :show, :new, :create, :edit, :update]
@@ -12,7 +12,7 @@ Bueller::Application.routes.draw do
   resource :sessions, only: [:new, :create, :destroy]
 
   # Attendance 
-  resources :attendances, only: [:new, :create, :update, :index]
+  resources :attendances, only: [:index, :show, :new, :create, :update]
 
   # Account
   get "/signin" => "sessions#new"
@@ -23,7 +23,7 @@ Bueller::Application.routes.draw do
   # I'm here feature
   get "/iam-here" => "attendances#new"
   get "/attendances" => "attendances#index"
-
+  get "/chart" => "attendances#seating_chart"
 
 
 

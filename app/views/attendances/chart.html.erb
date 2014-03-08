@@ -1,0 +1,51 @@
+<%- title "Attendance" %>
+<% active_tab :seating_chart %>
+<%= bootstrap_flash %>
+
+<%= form_tag(chart_path, method: :get, class: 'pull-right') do %>
+  <i class="fa fa-calendar"></i>
+  <%= date_field_tag('date', @current_date, size: 12) %>
+<% end %>
+
+<div class="attendance-grid">
+  <div class="attendance-grid-row">
+  <div class="attendance-grid-left">
+     <h4>Attendance on <%= @current_date.to_formatted_s(:long_ordinal) %></h4>
+
+    <div class="seats default-seats">
+      <% for seat_number in 1..4 do %>
+        <div class="seat">
+          <% if @attendances.has_key?(seat_number) %>
+              <% @attendances[seat_number].each do |attendance|  %>
+                <div class="student-row">
+                  <a href="<%=attendance_path(attendance.user)%>" class="picture"><img src="<%= attendance.user.image_url %>" width="40" height="40"/></a>
+                  <a href="<%=attendance_path(attendance.user)%>" class="nickname">
+                    <%= attendance.user.nickname %>
+                  </a>
+                </div>
+            <% end %>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <div class="attendance-grid-right">
+    <h4>Absent students</h4>
+    <% unless @absent_students.blank? %>
+    <table class="table">
+      <% @absent_students.each do |user|  %>
+        <tr>
+          <td> 
+            <a href="<%=user_path(user)%>"><img src="<%= user.image_url %>" width="40" height="40"/></a> 
+          </td>
+          <td> <%= link_to user.name, user_path(user) %> </td>
+        </tr>  
+      <% end %>
+    </table>
+    <% end %>
+  </div>
+  </div>
+</div>
+
+<%= content_for :javascript do %>
+<% end %>

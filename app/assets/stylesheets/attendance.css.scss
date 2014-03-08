@@ -101,3 +101,17 @@
     display: block
   }
 }
+
+.attendance-grid{
+  display: table;
+  width: 100%;
+   .attendance-grid-row{
+    display: table-row;
+   }
+  .attendance-grid-left,
+  .attendance-grid-right{
+    width: 50%;
+    display: table-cell;
+    vertical-align: top;
+  }
+}

@@ -1,5 +1,5 @@
 class AttendancesController < ApplicationController
-  before_filter :signed_in_user, :except => [:index]
+  before_filter :signed_in_user
 
   def new
     @attendance = Attendance.where(user: current_user, attended_on: Date.today).first() || Attendance.new
@@ -16,11 +16,11 @@ class AttendancesController < ApplicationController
       render 'new'
     else
       # Create a new attedance
-      @attendance.attended_on = Date.today;
+      @attendance.attended_on = Date.today
       @attendance.user = current_user
 
       if @attendance.save
-        redirect_to attendances_path, notice: "You have logged your attendance!"
+        redirect_to chart_path, notice: "You have logged your attendance!"
       else
         render 'new'
       end
@@ -35,7 +35,7 @@ class AttendancesController < ApplicationController
     if (params[:seat].nil? || params[:seat].empty?)
       @attendance = Attendance.where(user: current_user, attended_on: Date.today).first()
       if @attendance.destroy()
-        redirect_to attendances_path, notice: "You have removed your attendance!"
+        redirect_to chart_path, notice: "You have removed your attendance!"
       else
         render 'new'
       end
@@ -43,25 +43,41 @@ class AttendancesController < ApplicationController
       # Find the current attendance and update it
       @attendance = Attendance.where(user: current_user, attended_on: Date.today).first()
       if @attendance.update(attendance_params)
-        redirect_to attendances_path, notice: "You have logged your attendance!"
+        redirect_to chart_path, notice: "You have logged your attendance!"
       else
         render 'new'
       end
     end
   end
   
-  # Show all the attendances
+  # 
   def index
+    @attendances = Attendance.all.order(created_at: :desc)
+  end
+  
+  # Show all the attendances
+  def seating_chart
     @attendances = {}
-
-    @current_date = params[:date] ? Date.parse(params[:date]) : Date.today;
+    @current_date = params[:date] ? Date.parse(params[:date]) : Date.today
+    @attendances_records = Attendance.where(attended_on: @current_date).order(created_at: :asc)
+    @student_ids = @attendances_records.map(&:user_id)
 
     # Group students by seat number
-    Attendance.where(attended_on: @current_date).order(created_at: :asc).each do |attendance| 
+    @attendances_records.each do |attendance| 
       @attendances[attendance.seat] ||= []
       @attendances[attendance.seat].push(attendance)
-
     end
+
+    @absent_students = (@student_ids.empty?) ? User.all :
+      User.find(:all, :conditions => ['id not in (?)', @student_ids])
+
+    render 'chart'
+  end
+
+  # Show the attendance for a particular student 
+  def show
+    @user = User.find(params[:id])
+    @attendance = @user.attendances.order(created_at: :desc);
   end
 
   private
@@ -71,6 +87,6 @@ class AttendancesController < ApplicationController
 
     # Redirects to `signin_path` if the user hasn't signed in yet
     def signed_in_user
-      redirect_to signin_path, :status => 403, :flash => {:error => "Please sign in."} unless signed_in?
+      redirect_to signin_path, :status => 302 unless signed_in?
     end
 end

@@ -7,47 +7,30 @@ class AttendancesController < ApplicationController
 
   # Create a new attendance
   def create
-    params = attendance_params;
-    @attendance = Attendance.new(params)
+    @attendance = Attendance.new(attendance_params)
+    
+    # Create a new attedance
+    @attendance.attended_on = Date.today
+    @attendance.user = current_user
 
-    # The student hasn't chosen a seat
-    if (params[:seat].nil? || params[:seat].empty?)
-      flash.now[:alert] = 'Select a seat'
-      render 'new'
+    if @attendance.save
+      redirect_to chart_path, notice: "You have logged your attendance!"
     else
-      # Create a new attedance
-      @attendance.attended_on = Date.today
-      @attendance.user = current_user
-
-      if @attendance.save
-        redirect_to chart_path, notice: "You have logged your attendance!"
-      else
-        render 'new'
-      end
+      flash.now[:alert] = "Select a seat"
+      render "new"
     end
   end
 
   # Update the current attendance base on the current day and the user
   def update
-    params = attendance_params;
-
-    # If the user unselected the seat, remove the current seat
-    if (params[:seat].nil? || params[:seat].empty?)
-      @attendance = Attendance.where(user: current_user, attended_on: Date.today).first()
-      if @attendance.destroy()
-        redirect_to chart_path, notice: "You have removed your attendance!"
-      else
-        render 'new'
-      end
-    else 
-      # Find the current attendance and update it
-      @attendance = Attendance.where(user: current_user, attended_on: Date.today).first()
-      if @attendance.update(attendance_params)
-        redirect_to chart_path, notice: "You have logged your attendance!"
-      else
-        render 'new'
-      end
+    @attendance = Attendance.where(user: current_user, attended_on: Date.today).first()
+    if @attendance.update(attendance_params)
+      redirect_to chart_path, notice: "You have logged your attendance!"
+    else
+      flash.now[:alert] = "Select a seat"
+      render 'new'
     end
+    #end
   end
   
   # 

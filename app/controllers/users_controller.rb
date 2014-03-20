@@ -6,7 +6,7 @@ class UsersController < ApplicationController
   # # #
 
   def index
-    @users = User.all
+    @users = User.get_all_students
   end
 
   def new

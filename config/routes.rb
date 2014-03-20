@@ -14,6 +14,8 @@ Bueller::Application.routes.draw do
   # Attendance 
   resources :attendances, only: [:index, :show, :new, :create, :update]
 
+  resources :assignments
+
   # Account
   get "/signin" => "sessions#new"
   get "/signout" => "sessions#destroy"

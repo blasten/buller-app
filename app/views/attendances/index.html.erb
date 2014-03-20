@@ -2,6 +2,13 @@
 <% active_tab :attendances %>
 <%= bootstrap_flash %>
 
+<% if current_user.is_student? %>
+<a class="btn btn-default pull-right" href="iam-here">
+  <i class="fa fa-hand-o-up"></i>
+  <b>I'm here</b>
+</a>
+<% end %>
+
 <h3>Attendances</h3>
 
 <% unless @attendances.blank? %>

@@ -2,13 +2,6 @@
 <% active_tab :students %>
 <%= bootstrap_flash %>
 
-<% if signed_in? %>
-<a class="btn btn-default pull-right" href="iam-here">
-  <i class="fa fa-hand-o-up"></i>
-  <b>I'm here</b>
-</a>
-<% end %>
-
 <h3>Registered students so far</h3>
 
 <% unless @users.blank? %>

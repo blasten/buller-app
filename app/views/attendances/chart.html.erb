@@ -4,7 +4,7 @@
 
 <%= form_tag(chart_path, method: :get, class: 'pull-right') do %>
   <i class="fa fa-calendar"></i>
-  <%= date_field_tag('date', @current_date, size: 12) %>
+  <%= date_field_tag('date', @current_date, class: 'input-medium') %>
 <% end %>
 
 <div class="attendance-grid">

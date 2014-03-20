@@ -1,0 +1,21 @@
+// Place all the styles related to the Assignments controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.input-small[class="input-small"] {
+   width: 30px;
+}
+
+.input-medium[class="input-medium"] {
+   width: 130px;
+}
+
+.current_grade{
+  margin: 20px 0;
+  font-size: 18px;
+  color: green;
+}
+
+.select-students{
+  margin-right: 20px;
+}

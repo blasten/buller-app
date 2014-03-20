@@ -1,0 +1,53 @@
+<%- title "Assignments" %>
+<% active_tab :assignments %>
+<%= bootstrap_flash %>
+
+
+<h3>Assignments</h3>
+
+<a class="btn btn-default pull-right" href="<%= url_for :controller=>:assignments, :action=>:new, :student=>@current_student %>">
+  <i class="fa fa-plus"></i>
+  <b>New Assignment</b>
+</a>
+
+<%= form_tag(assignments_path, method: :get, class: 'pull-right select-students') do %>
+  <i class="fa fa-user"></i>
+  <%= select_tag :student, options_for_select(@students.collect {|p| [ p.name, p.id ] }, @current_student), { include_blank: true } %>
+<% end %>
+
+<div class="current_grade">Average: <strong> <%= number_with_precision(@average_grade, precision: 1) %>%</strong></div>
+
+<% unless @assignments.blank? %>
+<table class="table table-striped">
+  <tr>
+   <th>Student name</th>
+    <th>Assignment name</th>
+    <th>Score</th>
+    <th>Total</th>
+    <th>Percentage</th>
+  </tr>
+  <% @assignments.each do |assignment|  %>
+    <tr>
+      <td> <a href="<%=user_path(assignment.user)%>"><%= assignment.user.name %></a> </td>
+      <td> <%= assignment.name %> </td>
+      <td> <%= assignment.score %> </td>
+      <td> <%= assignment.total %> </td>
+      <td> <%= number_with_precision(assignment.score/assignment.total*100, precision: 1) %>% </td>
+    </tr>  
+  <% end %>
+</table>
+<% else %>
+  No assignment has been posted yet.
+<% end %>
+
+
+<%= content_for :javascript do %>
+<script type="text/javascript"> 
+  $("select[name=student]").on("change", function(e) {
+    var $form = $(this).parent('form');
+    if ($form[0]) {
+      $form.submit();
+    }
+  });
+</script>
+<% end %>

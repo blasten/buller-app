@@ -1,0 +1,30 @@
+<%- title "My Assignments" %>
+<% active_tab :assignments %>
+<%= bootstrap_flash %>
+
+
+<h3>My Assignments</h3>
+
+
+<div class="current_grade">Current grade: <strong> <%= @current_user.current_grade %>%</strong></div>
+
+<% unless @assignments.blank? %>
+<table class="table table-striped">
+  <tr>
+    <th>Name</th>
+    <th>Score</th>
+    <th>Total</th>
+    <th>Percentage</th>
+  </tr>
+  <% @assignments.each do |assignment|  %>
+    <tr>
+      <td> <%= assignment.name %> </td>
+      <td> <%= assignment.score %> </td>
+      <td> <%= assignment.total %> </td>
+      <td> <%= number_with_precision(assignment.score/assignment.total*100, precision: 1) %>% </td>
+    </tr>  
+  <% end %>
+</table>
+<% else %>
+  No assignment has been posted yet.
+<% end %>

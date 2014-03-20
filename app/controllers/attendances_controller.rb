@@ -1,5 +1,6 @@
 class AttendancesController < ApplicationController
   before_filter :signed_in_user
+  before_filter :is_a_student, :only =>[:new, :create, :update]
 
   def new
     @attendance = Attendance.where(user: current_user, attended_on: Date.today).first() || Attendance.new
@@ -9,10 +10,6 @@ class AttendancesController < ApplicationController
   def create
     @attendance = Attendance.new(attendance_params)
     
-    # Create a new attedance
-    @attendance.attended_on = Date.today
-    @attendance.user = current_user
-
     if @attendance.save
       redirect_to chart_path, notice: "You have logged your attendance!"
     else
@@ -51,7 +48,7 @@ class AttendancesController < ApplicationController
       @attendances[attendance.seat].push(attendance)
     end
 
-    @absent_students = (@student_ids.empty?) ? User.all :
+    @absent_students = (@student_ids.empty?) ? User.get_all_students :
       User.find(:all, :conditions => ['id not in (?)', @student_ids])
 
     render 'chart'
@@ -71,5 +68,9 @@ class AttendancesController < ApplicationController
     # Redirects to `signin_path` if the user hasn't signed in yet
     def signed_in_user
       redirect_to signin_path, :status => 302 unless signed_in?
+    end
+
+    def is_a_student
+      redirect_to root_path, :status => 302, :alert => 'Unathorized Access' unless current_user.is_student?
     end
 end

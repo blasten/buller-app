@@ -54,6 +54,18 @@
               <li class="<%= active_tab == :students ? 'active' : '' %>">
                 <%= link_to 'Students', users_path %>
               </li>
+
+              <% if current_user.is_admin? %>
+              <li class="<%= active_tab == :assignments ? 'active' : '' %>">
+                <%= link_to 'Assignments', assignments_path %>
+              </li>
+              <% end %>
+
+              <% if current_user.is_student? %>
+              <li class="<%= active_tab == :assignments ? 'active' : '' %>">
+                <%= link_to 'My Assignments', assignments_path %>
+              </li>
+              <% end %>
             </ul>
             <!-- edit profile -->
             <ul class="nav nav-pills pull-right">

@@ -7,6 +7,13 @@ class User < ActiveRecord::Base
   # password (using a password_confirmation attribute) are automatically added. 
   # If you wish to turn off validations, pass validations: false as an argument. 
   # You can add more validations by hand if need be.
+
+  # User roles
+
+  ROLE_STUDENT = 1
+  ROLE_ADMIN = 2
+
+  # Encrypt password using MD5 digest hashing
   
   has_secure_password
 
@@ -19,10 +26,15 @@ class User < ActiveRecord::Base
   # A user can have many attandances
 
   has_many :attendances
+  has_many :assignments
 
   # Use lowercase email before saving the model
 
   before_save { |user| user.email = email.downcase }
+
+  # Make a student user by default
+
+  before_save{ |user| user.role ||= ROLE_STUDENT}
   
   # Create a unique token before saving the model
 
@@ -37,15 +49,30 @@ class User < ActiveRecord::Base
 
     if src.length==0
       hash = Digest::MD5.hexdigest(read_attribute(:email).downcase)
-      return "http://www.gravatar.com/avatar/#{hash}"
+      "http://www.gravatar.com/avatar/#{hash}"
     else 
-      return src
+      src
     end
+  end
+
+  # Returns true if this user is a student
+  # Ideally this field should be type `ENUM`, but rails migrations don't offer that type
+  def is_student?
+    read_attribute(:role) == ROLE_STUDENT
+  end
+
+  # Returns true if this user is an admin
+  def is_admin?
+    read_attribute(:role) == ROLE_ADMIN
+  end
+
+  def current_grade
+    ( assignments.count>0 ) ? assignments.sum("100*score/total") / assignments.count : 0;
   end
 
   # Returns the list of students who attended on `date` and sat down on `seat`
   def self.in_seat(seat, date)
-    return User.joins(:attendances).where(attendances: {seat: seat, attended_on: date});
+    User.joins(:attendances).where(attendances: {seat: seat, attended_on: date});
   end
 
   # Returns the list of absent students
@@ -53,7 +80,13 @@ class User < ActiveRecord::Base
   # `SELECT U.* FROM user U WHERE U.id NOT IN(SELECT A.id_user FROM attedance A FROM A.date=?)`
 
   def self.absent(date)
-    return User.joins(:attendances).where.not(attendances: {attended_on: date});
+    User.joins(:attendances).where("role = ? and attendances.attended_on != ?", ROLE_STUDENT, date);
+  end
+
+  # Gets all the students
+
+  def self.get_all_students
+    User.where(:role => ROLE_STUDENT)
   end
 
   private

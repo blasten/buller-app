@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140207225729) do
+ActiveRecord::Schema.define(version: 20140320033023) do
+
+  create_table "assignments", force: true do |t|
+    t.string   "name"
+    t.decimal  "score"
+    t.decimal  "total"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "attendances", force: true do |t|
     t.datetime "created_at"
@@ -30,6 +39,7 @@ ActiveRecord::Schema.define(version: 20140207225729) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "remember_token"
+    t.integer  "role"
   end
 
   add_index "users", ["remember_token"], name: "index_users_on_remember_token"

@@ -1,0 +1,14 @@
+<%- title "Import Assignments" %>
+<% active_tab :new_assignment %>
+
+<h3>Import Assignments</h3>
+
+<%= bootstrap_flash %>
+
+<%=@file_content %>
+
+<%= form_tag({action: :import}, multipart: true) do %>
+  <label for="file">Please upload a .csv file</label>
+  <%= file_field_tag :file, accept: "text/csv" %>
+  <%= submit_tag "Import", class: "btn btn-primary" %>
+<% end %>

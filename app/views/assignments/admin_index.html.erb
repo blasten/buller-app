@@ -5,10 +5,23 @@
 
 <h3>Assignments</h3>
 
-<a class="btn btn-default pull-right" href="<%= url_for :controller=>:assignments, :action=>:new, :student=>@current_student %>">
+<div class="dropdown  pull-right">
+  <a class="btn btn-default" data-toggle="dropdown" href="">
   <i class="fa fa-plus"></i>
-  <b>New Assignment</b>
 </a>
+ <ul class="dropdown-menu" role="menu" aria-labelledby="drop2">
+  <li role="presentation"><a role="menuitem" tabindex="1" href="<%= url_for :controller=>:assignments, :action=>:new, :student=>@current_student %>">New Assignment</a></li>
+
+  <li role="presentation">
+    <a role="menuitem" tabindex="2" class="import-form">
+      Import .csv
+      <%= form_tag({action: :import}, multipart: true) do %>
+      <%= file_field_tag :file, accept: "text/csv" %>
+      <% end %>
+    </a></li>
+</ul>
+</div>
+
 
 <%= form_tag(assignments_path, method: :get, class: 'pull-right select-students') do %>
   <i class="fa fa-user"></i>
@@ -44,6 +57,13 @@
 <%= content_for :javascript do %>
 <script type="text/javascript"> 
   $("select[name=student]").on("change", function(e) {
+    var $form = $(this).parent('form');
+    if ($form[0]) {
+      $form.submit();
+    }
+  });
+
+  $("input[name=file]").on("change", function(e) {
     var $form = $(this).parent('form');
     if ($form[0]) {
       $form.submit();

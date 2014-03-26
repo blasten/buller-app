@@ -9,6 +9,7 @@ class AttendancesController < ApplicationController
   # Create a new attendance
   def create
     @attendance = Attendance.new(attendance_params)
+    @attendance.user = current_user;
     
     if @attendance.save
       redirect_to chart_path, notice: "You have logged your attendance!"

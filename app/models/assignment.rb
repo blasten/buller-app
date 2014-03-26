@@ -16,6 +16,33 @@ class Assignment < ActiveRecord::Base
     self.all.count>0 ? self.sum("100*score/total")/self.all.count : 0
   end
 
+  # Import assignments from a string in CSV format
+  def self.import(csv_data)
+    imported = 0
+    csv_data.each_line do |line|
+      fields = line.split(",")
+      email = fields[0].strip
+      assignment_name = fields[1].strip
+      total = fields[2].strip
+      score = fields[3].strip
+      # If there's a user who has this email
+      user = User.find_by_email(email)
+      if not user.nil? and user.is_student?
+        assignment = Assignment.where(user: user, name: assignment_name).first
+        if assignment.nil?
+          if Assignment.create(user: user, name: assignment_name, total: total, score: score)
+            imported += 1
+          end
+        else
+          if assignment.update(total: total, score: score)
+          
+          end
+        end
+      end
+    end
+    imported
+  end
+
   private
   def verify_student
     if user_id.present?

@@ -14,7 +14,14 @@ Bueller::Application.routes.draw do
   # Attendance 
   resources :attendances, only: [:index, :show, :new, :create, :update]
 
-  resources :assignments
+  # Assignments
+  resources :assignments do
+    collection do
+      get "import"
+      post "import"
+    end
+  end
+
 
   # Account
   get "/signin" => "sessions#new"

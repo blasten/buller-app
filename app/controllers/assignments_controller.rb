@@ -1,6 +1,6 @@
 class AssignmentsController < ApplicationController
   before_filter :signed_in_user
-  before_filter :is_admin, :only =>[:new, :create, :update]
+  before_filter :is_admin, :only =>[:new, :create, :update, :import]
   before_filter :is_student, :only =>[:show]
 
   def new
@@ -40,7 +40,21 @@ class AssignmentsController < ApplicationController
     end
   end
 
+  def import
+    if request.post?
+      uploaded_file = params[:file]
+      if (not uploaded_file.nil?)
+        total_imports =  Assignment.import(uploaded_file.read)
+        redirect_to assignments_path, :notice => sprintf("%s assignment(s) were created", total_imports)
+      end
+    end
+  end
+
   private
+    def import_params
+      params.require(:assignment).permit(:file)
+    end
+
     def assignment_params
       params.require(:assignment).permit(:user_id, :name, :score, :total)
     end
